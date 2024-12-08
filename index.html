@@ -8,6 +8,34 @@
 </head>
 <body>
     <canvas id="kaleidoCanvas"></canvas>
+
+    <!-- Cog Button -->
+    <button id="settingsCog" class="cog-button">⚙️</button>
+
+    <!-- Settings Window -->
+    <div id="settingsWindow" class="settings-window hidden">
+        <button id="closeSettings" class="close-button">✖</button>
+        <div id="settingsContent">
+            <h3>Adjustments</h3>
+            <label>
+                Segment Count:
+                <input type="number" id="segmentInput" min="3" max="12" value="6" />
+            </label>
+            <label>
+                Time Speed:
+                <input type="range" id="timeSpeed" min="0.1" max="5" step="0.1" value="1" />
+            </label>
+            <label>
+                Color Intensity:
+                <input type="range" id="colorIntensity" min="0.1" max="2" step="0.1" value="1" />
+            </label>
+            <label>
+                Cog Opacity:
+                <input type="range" id="opacitySlider" min="0" max="1" step="0.1" value="1" />
+            </label>
+        </div>
+    </div>
+
     <script type="module" src="./main.js"></script>
 </body>
 </html>

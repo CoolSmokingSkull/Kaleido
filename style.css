@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     overflow: hidden;
@@ -6,4 +7,88 @@ body {
 
 canvas {
     display: block;
+}
+
+/* Styles for the Cog Button */
+.cog-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Styles for the Settings Window */
+.settings-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90vw;
+    max-width: 500px;
+    height: 90vh;
+    max-height: 600px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    opacity: 1;
+    border-radius: 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(0);
+}
+
+.settings-window.hidden {
+    transform: translateY(100vh);
+}
+
+#settingsContent {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+/* Close Button */
+.close-button {
+    align-self: flex-end;
+    margin: 10px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Input Styles */
+input[type="number"], input[type="range"] {
+    margin: 10px 0;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .settings-window {
+        width: 95vw;
+        height: 95vh;
+    }
+
+    #settingsContent {
+        width: 100%;
+    }
 }
